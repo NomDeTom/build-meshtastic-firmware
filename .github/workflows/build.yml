@@ -80,7 +80,7 @@ jobs:
 
 
           - arch: nrf52840
-            board: promicro-nrf52840
+            board: nrf52_promicro_diy_tcxo
             build_src_filter: ${nrf52_base.build_src_filter} +<../variants/diy/nrf52_promicro_diy_tcxo>
             artifact-paths: |
               release/*.hex
