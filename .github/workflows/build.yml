@@ -54,62 +54,34 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - arch: esp32s3
-            board: seeed-sensecap-indicator-tft
-            artifact-paths: |
-              release/*.bin
-              release/*.elf
+#          - arch: esp32s3
+#           board: seeed-sensecap-indicator-tft
+#            artifact-paths: |
+#              release/*.bin
+#              release/*.elf
 
-          - arch: esp32s3
-            board: mesh-tab-3-2-TN-resistive
-            artifact-paths: |
-              release/*.bin
-              release/*.elf
+#          - arch: esp32s3
+#            board: mesh-tab-3-2-TN-resistive
+#            artifact-paths: |
+#              release/*.bin
+#              release/*.elf
 
-          - arch: esp32s3
-            board: mesh-tab-3-2-IPS-resistive
-            artifact-paths: |
-              release/*.bin
-              release/*.elf
+#          - arch: esp32s3
+#            board: mesh-tab-3-2-IPS-resistive
+#            artifact-paths: |
+#              release/*.bin
+#              release/*.elf
 
-          - arch: esp32s3
-            board: mesh-tab-3-5-IPS-resistive
-            artifact-paths: |
-              release/*.bin
-              release/*.elf
+#          - arch: esp32s3
+#            board: mesh-tab-3-5-IPS-resistive
+#            artifact-paths: |
+#              release/*.bin
+#              release/*.elf#
 
-          - arch: esp32s3
-            board: mesh-tab-3-5-TN-resistive
-            artifact-paths: |
-              release/*.bin
-              release/*.elf
-
-          - arch: esp32s3
-            board: mesh-tab-3-2-IPS-capacitive
-            artifact-paths: |
-              release/*.bin
-              release/*.elf
-
-          - arch: esp32s3
-            board: mesh-tab-3-5-IPS-capacitive
-            artifact-paths: |
-              release/*.bin
-              release/*.elf
-
-          - arch: esp32s3
-            board: mesh-tab-4-0-IPS-capacitive
-            artifact-paths: |
-              release/*.bin
-              release/*.elf
-
-          - arch: esp32s3
-            board: t-deck
-            artifact-paths: |
-              release/*.bin
-              release/*.elf
 
           - arch: nrf52840
-            board: xiao_ble
+            board: promicro-nrf52840
+            build_src_filter: ${nrf52_base.build_src_filter} +<../variants/diy/nrf52_promicro_diy_tcxo>
             artifact-paths: |
               release/*.hex
               release/*.uf2
