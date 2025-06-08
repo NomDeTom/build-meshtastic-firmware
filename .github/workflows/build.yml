@@ -66,11 +66,11 @@ jobs:
               release/*.bin
               release/*.elf
 
-#          - arch: esp32s3
-#            board: mesh-tab-3-2-IPS-resistive
-#            artifact-paths: |
-#              release/*.bin
-#              release/*.elf
+          - arch: esp32c3
+            board: heltec-ht62-esp32c3-sx1262
+            artifact-paths: |
+              release/*.bin
+              release/*.elf
 
 #          - arch: esp32s3
 #            board: mesh-tab-3-5-IPS-resistive
