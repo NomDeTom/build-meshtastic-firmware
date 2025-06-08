@@ -60,11 +60,11 @@ jobs:
 #              release/*.bin
 #              release/*.elf
 
-#          - arch: esp32s3
-#            board: mesh-tab-3-2-TN-resistive
-#            artifact-paths: |
-#              release/*.bin
-#              release/*.elf
+          - arch: esp32c3
+            board: esp32-c3-devkitm-1
+            artifact-paths: |
+              release/*.bin
+              release/*.elf
 
 #          - arch: esp32s3
 #            board: mesh-tab-3-2-IPS-resistive
