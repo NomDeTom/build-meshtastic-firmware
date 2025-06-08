@@ -155,7 +155,7 @@ jobs:
       - id: gh_upstream_release
         name: Get Meshtastic firmware release info for ${{ env.meshtastic_firmware_ref }}
         run: |
-          jdata=$(curl -s ${{ github.api_url }}/repos/meshtastic/firmware/releases | jq '.[] | select(.tag_name == "${{ env.meshtastic_firmware_ref }}")')
+          jdata=$(curl -s ${{ github.api_url }}/repos/NomDeTom/firmware/releases | jq '.[] | select(.tag_name == "${{ env.meshtastic_firmware_ref }}")')
           echo "prerelease=$(jq -r '.prerelease' <<< $jdata)" >> $GITHUB_OUTPUT
           echo "name=$(jq -r '.name' <<< $jdata)" >> $GITHUB_OUTPUT
 
