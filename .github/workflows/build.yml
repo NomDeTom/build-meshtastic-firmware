@@ -61,7 +61,7 @@ jobs:
 #              release/*.elf
 
           - arch: esp32c3
-            board: esp32-c3-devkitm-1
+            board: heltec_esp32c3
             artifact-paths: |
               release/*.bin
               release/*.elf
@@ -79,34 +79,34 @@ jobs:
 #              release/*.elf#
 
 
-          - arch: nrf52840
-            board: nrf52_promicro_diy_tcxo
-            build_src_filter: ${nrf52_base.build_src_filter} +<../variants/diy/nrf52_promicro_diy_tcxo>
-            artifact-paths: |
-              release/*.hex
-              release/*.uf2
-              release/*.elf
-              release/*.zip
+#          - arch: nrf52840
+#            board: nrf52_promicro_diy_tcxo
+#            build_src_filter: ${nrf52_base.build_src_filter} +<../variants/diy/nrf52_promicro_diy_tcxo>
+#            artifact-paths: |
+#              release/*.hex
+#              release/*.uf2
+#              release/*.elf
+#              release/*.zip
 
-          - arch: nrf52840
-            board: heltec-mesh-node-t114
-            artifact-paths: |
-              release/*.hex
-              release/*.uf2
-              release/*.elf
-              release/*.zip
+#          - arch: nrf52840
+#            board: heltec-mesh-node-t114
+#            artifact-paths: |
+#              release/*.hex
+#              release/*.uf2
+#              release/*.elf
+#              release/*.zip
 
-          - arch: esp32s3
-            board: t-energy-s3_e22
-            artifact-paths: |
-              release/*.bin
-              release/*.elf
+#          - arch: esp32s3
+#            board: t-energy-s3_e22
+#            artifact-paths: |
+#              release/*.bin
+#              release/*.elf
 
-          - arch: rp2040
-            board: rp2040-lora-slowclock
-            artifact-paths: |
-              release/*.uf2
-              release/*.elf
+#          - arch: rp2040
+#            board: rp2040-lora-slowclock
+#            artifact-paths: |
+#              release/*.uf2
+#              release/*.elf
 
     runs-on: ubuntu-24.04
     outputs:
